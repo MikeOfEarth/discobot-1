@@ -1,7 +1,32 @@
 import settings
+import discord
+from discord.ext import commands
+
+logger= settings.logging.getLogger("bot")
 
 def run():
-    print(settings.DISCORD_API_SECRET)
+    intents = discord.Intents.default()
+    intents.message_content = True
+
+    bot = commands.Bot(command_prefix="!", intents=intents)
+    
+    @bot.event
+    async def on_ready():
+        logger.info(f"User: {bot.user} (ID: {bot.user.id})")
+        print("____________________")
+
+    @bot.command(
+            aliases=['p'],
+            help="Answers with pong",
+            description="*Whack*",
+            brief="You probably can guess what this does",
+            enabled=True,
+            hidden=True
+    )
+    async def ping(ctx):
+        await ctx.send("pong")
+    
+    bot.run(settings.DISCORD_API_SECRET, root_logger=True)
 
 if __name__ == "__main__":
     run()
