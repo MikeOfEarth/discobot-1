@@ -46,12 +46,7 @@ def run():
     @bot.command()
     async def adder(ctx, *nums:int):
         await ctx.send(sum(nums))
-
     
-    # @bot.command()
-    # async def say(ctx, what = "What?"):
-    #     await ctx.send(what)
-        
     bot.run(settings.DISCORD_API_SECRET, root_logger=True)
 
 if __name__ == "__main__":
