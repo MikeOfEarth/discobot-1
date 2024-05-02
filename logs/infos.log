@@ -1,3 +1,2 @@
-INFO       - 2024-05-01 17:27:21,280 - client          : logging in using static token
-INFO       - 2024-05-01 17:27:21,941 - gateway         : Shard ID None has connected to Gateway (Session ID: a886f0686bf180a30be918e79af99940).
-INFO       - 2024-05-01 18:18:00,899 - gateway         : Shard ID None has successfully RESUMED session a886f0686bf180a30be918e79af99940.
+INFO       - 2024-05-02 17:22:11,957 - client          : logging in using static token
+INFO       - 2024-05-02 17:22:12,565 - gateway         : Shard ID None has connected to Gateway (Session ID: 7503aab832cfc04ade86f8127bbe60dd).

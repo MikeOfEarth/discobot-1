@@ -14,7 +14,7 @@ class Slapper(commands.Converter):
     async def convert(self, ctx, argument):
         someone = random.choice(ctx.guild.members)
         nickname = ctx.author
-        if self.use_nicknames:
+        if self.use_nicknames and self.use_nicknames!="None":
             nickname = ctx.author.nick
             
         return f"{nickname} slaps {someone} with {argument}"
@@ -28,7 +28,8 @@ def run():
     @bot.event 
     async def on_ready():
         logger.info(f"User: {bot.user} (ID: {bot.user.id})")
-    
+        print("____________________")
+
     @bot.command()
     async def add(ctx, one : int  , two : int ):
         await ctx.send(one + two)
