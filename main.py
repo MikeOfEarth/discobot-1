@@ -43,9 +43,6 @@ def run():
         await ctx.send('Picking between options.....')
         await ctx.send(f'How about {random.choice(options)}?')
     
-    @bot.command()
-    async def adder(ctx, *nums:int):
-        await ctx.send(sum(nums))
 
     
     # @bot.command()
